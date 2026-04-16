@@ -1,0 +1,45 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.canvasArea {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.toast {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  z-index: 1000;
+  animation: toastIn 200ms ease;
+  pointer-events: none;
+}
+
+.toast.success { background: #065f46; border-color: #10b981; }
+.toast.error { background: #7f1d1d; border-color: #ef4444; }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

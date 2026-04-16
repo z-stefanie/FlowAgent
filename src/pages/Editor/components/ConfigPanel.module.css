@@ -1,0 +1,231 @@
+.panel {
+  width: 320px;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-tertiary);
+  font-size: 13px;
+  gap: 8px;
+}
+
+.nodeHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nodeTypeIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.nodeTypeName {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fieldGroup {
+  margin-bottom: 16px;
+}
+
+.fieldLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.fieldInput {
+  width: 100%;
+  padding: 7px 10px;
+  font-size: 12.5px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast);
+}
+
+.fieldInput:focus {
+  border-color: var(--accent);
+}
+
+.fieldTextarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 12.5px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  resize: vertical;
+  min-height: 70px;
+  line-height: 1.5;
+  font-family: 'Inter', monospace;
+  transition: border-color var(--transition-fast);
+}
+
+.fieldTextarea:focus {
+  border-color: var(--accent);
+}
+
+.fieldSelect {
+  width: 100%;
+  padding: 7px 10px;
+  font-size: 12.5px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238b8b9e' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.varList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.varRow {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.varInput {
+  flex: 1;
+  padding: 5px 8px;
+  font-size: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
+.varInput:focus {
+  border-color: var(--accent);
+}
+
+.removeBtn {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.removeBtn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--danger);
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  font-size: 11.5px;
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border);
+  transition: all var(--transition-fast);
+  width: fit-content;
+}
+
+.addBtn:hover {
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.sliderValue {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.hint code {
+  background: var(--bg-tertiary);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 10.5px;
+}
+
+.startColor { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+.promptColor { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+.llmColor { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
+.conditionColor { background: rgba(236, 72, 153, 0.15); color: #ec4899; }
+.codeColor { background: rgba(6, 182, 212, 0.15); color: #06b6d4; }
+.outputColor { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
