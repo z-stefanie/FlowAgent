@@ -263,7 +263,7 @@ export default class FlowEngine {
       }
     }
 
-    return { conditionResult: result, upstreamValue };
+    return { conditionResult: result, upstreamValue, result: upstreamValue };
   }
 
   executeCode(node, input) {
